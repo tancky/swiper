@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>原生JS轮播图封装</title>
+    <style>
+        html,body,h1,h2,h3,h4,h5,h6,div,ul,li,p,form {
+            margin: 0;
+            padding: 0;
+        }
+        img {
+            display: block;
+            border: 0;
+        }
+        ul,li {
+            list-style: none;
+        }
+        a {
+            display: block;
+            text-decoration: none;
+        }
+        .swiper-container {
+            position: relative;
+            width: 790px;
+            height: 340px;
+            overflow: hidden;
+            margin: 100px auto;
+        }
+        .swiper-container:hover .slider-ctrl {
+            transition: opacity .35s .35s;
+            opacity: 1;
+        }
+        .swiper-wrapper {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            transition: left .6s;
+        }
+        .swiper-slide {
+            float: left;
+        }
+        .inner-indicator .active{
+            background-color: #db192a;
+        }
+        .slider-ctrl{
+            display: block;
+            position: absolute;
+            top: 50%;
+            margin-top: -30px;
+            width: 30px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            color: #fff;
+            background-color: rgba(0,0,0,.1);
+            z-index: 99;
+            opacity: 0;
+        }
+        .slider-ctrl:hover{
+            transition: all .35s;
+            background-color: rgba(0,0,0,.7);
+        }
+        .prev{
+            left: 0;
+            cursor: pointer;
+        }.next{
+             right: 0;
+             cursor: pointer;
+         }
+        .inner-indicator{
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            margin-left: -50px;
+            padding: 4px 10px;
+            border-radius: 12px;
+            background-color: hsla(0,0%,100%,.3);
+        }
+        .inner-indicator i{
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            margin-right: 5px;
+            border-radius: 50%;
+            background-color: #fff;
+            cursor: pointer;
+        }
+        .inner-indicator i:last-child {
+            margin-right: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="">
+                    <img src="./img/img0.jpg" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="">
+                    <img src="./img/img1.jpg" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="">
+                    <img src="./img/img2.jpg" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="">
+                    <img src="./img/img3.jpg" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="">
+                    <img src="./img/img4.jpg" alt="">
+                </a>
+            </div>
+        </div>
+        <span class="slider-ctrl prev">&lt;</span>
+        <span class="slider-ctrl next">&gt;</span>
+    </div>
+    <script src="./js/index.js"></script>
+    <script>
+       new Carousel('.swiper-container');
+    </script>
+</body>
+</html>

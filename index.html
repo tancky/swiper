@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>轮播图</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		a {
+			color:#666;
+			text-decoration: none;
+		}
+		img{
+			display: block;
+			border: none;
+		}
+		.container{
+			position: relative;
+			overflow: hidden;
+			width: 790px;
+			height: 340px;
+            margin:100px auto;
+		}
+		.slider{
+			position: absolute;
+			height: 100%;
+			overflow: hidden;
+		}
+		.slider-item{
+			float: left;
+			list-style: none;
+		}
+		.inner-indicator{
+			position: absolute;
+			bottom: 10px;
+			left: 50%;
+			margin-left: -50px;
+			padding: 4px 10px;
+			border-radius: 12px;
+			background-color: hsla(0,0%,100%,.3);
+		}
+        .inner-indicator i{
+			display: inline-block;
+			width: 12px;
+			height: 12px;
+            margin-right: 5px;
+			border-radius: 50%;
+			background-color: #fff;
+			cursor: pointer;
+		}
+        .inner-indicator i:last-child {
+            margin-right: 0px;
+        }
+		.slider-ctrl{
+			display: block;
+			position: absolute;
+			top: 50%;
+			margin-top: -30px;
+			width: 30px;
+			height: 60px;
+			line-height: 60px;
+			text-align: center;
+			color: #fff;
+			background-color: rgba(0,0,0,.1);
+            z-index: 2;
+		}
+		.slider-ctrl:hover{
+			background-color: rgba(0,0,0,.7);
+		}
+		.prev{
+			left: 0;
+			cursor: pointer;
+		}.next{
+			right: 0;
+			cursor: pointer;
+		}
+        .inner-indicator .active{
+			background-color: #db192a;
+		}
+	</style>
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/mySwiper.js"></script>
+</head>
+<body>
+<div class="container">
+	<ul class="slider">
+        <li class="slider-item">
+            <a href=""><img src="./img/img0.jpg" alt=""></a>
+        </li>
+		<li class="slider-item">
+			<a href=""><img src="./img/img1.jpg" alt=""></a>
+		</li>
+		<li class="slider-item">
+			<a href=""><img src="./img/img2.jpg" alt=""></a>
+		</li>
+		<li class="slider-item">
+			<a href=""><img src="./img/img3.jpg" alt=""></a>
+		</li>
+        <li class="slider-item">
+            <a href=""><img src="./img/img4.jpg" alt=""></a>
+        </li>
+	</ul>
+	<div class="inner-indicator"></div>
+	<div class="slider-ctrl prev">&lt;</div>
+	<div class="slider-ctrl next">&gt;</div>
+</div>
+</body>
+</html>
