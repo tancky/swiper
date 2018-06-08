@@ -1,5 +1,5 @@
 /**
- * Created by Tancky on 2018/1/17 0017.
+ * Created by Tancky on 2018/6/17 0017.
  */
 
 // 原生JS封装轮播图
